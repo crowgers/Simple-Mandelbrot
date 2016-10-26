@@ -7,3 +7,5 @@ Yes this could be optimized but the point for this is to be easily replicated so
 Coded in Jetbrains Pycharm Community edition. Link: https://www.jetbrains.com/pycharm/download/#section=windows
 
 Editor Color Theme:
+
+![alt tag](https://raw.githubusercontent.com/crowgers/projectname/Simple-Mandelbrot/images/mandelbrot.png)
