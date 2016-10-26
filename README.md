@@ -8,9 +8,9 @@ Coded in Jetbrains Pycharm Community edition. Link: https://www.jetbrains.com/py
 
 Editor Color Theme:
 
-![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot.png)
 ![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot1.png)
+![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot.png)
 ![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot2.png)
 ![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot3.png)
 ![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot4.png)
-![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot5.png)
+
