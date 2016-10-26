@@ -8,4 +8,4 @@ Coded in Jetbrains Pycharm Community edition. Link: https://www.jetbrains.com/py
 
 Editor Color Theme:
 
-![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/Images/MandelBrot.png)
+![alt tag](https://raw.githubusercontent.com/crowgers/Simple-Mandelbrot/master/Images/MandelBrot.png)
