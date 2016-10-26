@@ -51,7 +51,7 @@ print("Note that -2 -> x -> 2 & -2 -> y -> 2 encompass the set.\n")
 # mandelbrot_main(.34, .36, .50, 5.2, 1000, 100
 # mandelbrot_main(.30, .32, .56, .58, 1000, 100)
 # mandelbrot_main(.36, .38, .58, .60, 1000, 50)
-# Global_x_min, Global_x_max, Global_y_min, Global_y_max = [float(x) for x in raw_input("Enter x & y plotting boundaries (xmin, xmax, ymin, ymax: ").split()]
+# Global_x_min, Global_x_max, Global_y_min, Global_y_max = [float(x) for x in raw_input("Enter x & y plotting boundaries (xmin xmax ymin ymax): ").split()]
 # Global_Grid_size, Global_Tolerance = [int(x) for x in raw_input("Enter grid size and tolerance here (recommend 1000 100): ").split()]
 
 Global_x_min = float(input("Input x_min:"))
