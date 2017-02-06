@@ -2,7 +2,7 @@ Simple-Mandelbrot
 
 Python Code to compute and generate images for the Mandelbrot set given user input variables. Used Matplotlib and Numpy packages.
 
-Yes this could be optimized but the point for this is to be easily replicated so anyone can pick up, understand and play with. Optimised versions will be added.
+Yes this could be optimized but the point for this is so anyone even those with little to no coding experience can pick up, replicate and play with.  Optimised versions may be added.
 
 Coded in Jetbrains Pycharm Community edition. Link: https://www.jetbrains.com/pycharm/download/#section=windows
 
