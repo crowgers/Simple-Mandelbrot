@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# Plotting algorithm creating a heatmap - Relied on by main.
+# Plotting function creates a heatmap - Relied on by main.
 def plotting(value, tolerance, x_min, x_max, y_min, y_max):
 	plt.xlabel("Real Axis")
 	plt.ylabel("Imaginary Axis")
@@ -19,7 +19,7 @@ def plotting(value, tolerance, x_min, x_max, y_min, y_max):
 	plt.show()
 
 
-# Algorithm to compute if point is within set - relied on by main
+# Algorithm to compute if point is within set - Relied on by main
 def mandel_calc(point, tolerance):
 	z = 0
 	for i in range(1, tolerance):
