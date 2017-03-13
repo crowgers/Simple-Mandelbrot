@@ -46,12 +46,12 @@ print("A plot is saved to file and then printed to screen.\n")
 print("Note that -2 -> x -> 2 & -2 -> y -> 2 encompass the set.\n")
 
 # Sample grids to run.
-# mandelbrot_main(-2, 2, -2, 2, 1000, 100)
-# mandelbrot_main(0, .5, .5, 1.0, 1000, 100)
-# mandelbrot_main(.5, .6, .3, .4, 1000, 100)
-# mandelbrot_main(.34, .36, .50, 5.2, 1000, 100
-# mandelbrot_main(.30, .32, .56, .58, 1000, 100)
-# mandelbrot_main(.36, .38, .58, .60, 1000, 50)
+# _mandelbrot_main(-2, 2, -2, 2, 1000, 100)
+# _mandelbrot_main(0, .5, .5, 1.0, 1000, 100)
+# _mandelbrot_main(.5, .6, .3, .4, 1000, 100)
+# _mandelbrot_main(.34, .36, .50, 5.2, 1000, 100
+# _mandelbrot_main(.30, .32, .56, .58, 1000, 100)
+# _mandelbrot_main(.36, .38, .58, .60, 1000, 50)
 
 G_x_min = float(input("Input x_min:"))
 G_x_max = float(input("Input x_max:"))
