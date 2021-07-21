@@ -17,6 +17,7 @@ def fn_plotting(values, tolerance, x_min, x_max, y_min, y_max):
 	plt.ylabel("Imaginary Axis")
 	plt.title("The Mandelbrot Set. Tolerance: %s" % tolerance)
 	plt.grid(True)
+	
 	plt.imshow(values, origin="0,0", interpolation="none", extent=[x_min, x_max, y_min, y_max])
 	plt.savefig("MandelBrot.png", bbox_inches="tight")
 	plt.show()
