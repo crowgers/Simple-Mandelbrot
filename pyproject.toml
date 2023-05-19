@@ -1,14 +1,94 @@
-[tool.poetry]
-name = "simple-mandelbrot"
-version = "0.1.0"
+[project]
+name = "mandelbrot"
+version = "0.2.0"
 description = ""
-authors = ["Cormac Rogers <12558716+Crowgers@users.noreply.github.com>"]
+authors = [
+    {name ="Cormac Rogers", email="cormac.rogers@protonmail.com"}
+]
+readme = "README.md"
+requires-python = ">3.11"
 
-[tool.poetry.dependencies]
-python = "^3.9"
+dependencies = [
+    "matplotlib",
+    "Numpy"
+]
 
-[tool.poetry.dev-dependencies]
+[project.optional-dependencies]
+test = [
+    "coverage",
+    "hypothesis",
+    "pytest"
+]
+dev = [
+    "black",
+    "flake8",
+    "Flake8-pyproject",
+    "isort",
+    "pre-commit",
+    "pyflakes",
+    "python-dotenv",
+    "vermin",
+]
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[project.scripts]
+"mandelbrot" = "bin.app:main"
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \venv
+    | venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | features
+    | tests
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
+
+[tool.coverage.run]
+source = ["."]
+
+[tool.flake8] # needs a monkey-patch dependency
+exclude = [
+    "features/*",
+    "build/*",
+    "venv/*",
+    ".venv/*",
+    "./venv/*",
+]
+ignore = ["W503", "E501", "E203"]
+max-complexity = 20
+max-line-length = 120
+
+[tool.isort]
+line_length = 120
+
+[tool.mypy]
+plugins = "sqlmypy"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+"tests" = [
+    "data/*.yml"
+]
