@@ -3,7 +3,7 @@ from mandelbrot import Mandelbrot
 
 
 def main():
-    """Draw the mandlebrot set."""
+    """Draw the mandelbrot set."""
     mandel = Mandelbrot()
     print(
         """

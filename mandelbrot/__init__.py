@@ -1,5 +1,7 @@
-"""Mandlebrot class used to calculate the mandlebrot set."""
+"""Mandlebrot class used to calculate the mandelbrot set."""
+from datetime import datetime
 from os import getenv
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv
@@ -7,17 +9,17 @@ from numpy import empty, linspace
 
 
 class Mandelbrot:
-    """Mandlebrot."""
+    """Mandelbrot."""
 
     def __init__(self):
         """Load config from Environment."""
         load_dotenv()
-        self.tolerance = int(getenv("TOLERANCE"))
-        self.grid_points = int(getenv("GRID_POINTS"))
-        self.x_min = int(getenv("X_MIN"))
-        self.x_max = int(getenv("X_MAX"))
-        self.y_min = int(getenv("Y_MIN"))
-        self.y_max = int(getenv("Y_MAX"))
+        self.tolerance = int(getenv("TOLERANCE", 75))
+        self.grid_points = int(getenv("GRID_POINTS", 1000))
+        self.x_min = float(getenv("X_MIN", -2))
+        self.x_max = float(getenv("X_MAX", 2))
+        self.y_min = float(getenv("Y_MIN", -2))
+        self.y_max = float(getenv("Y_MAX", 2))
 
     def run(self):
         """Iterate through all grid points."""
@@ -28,7 +30,6 @@ class Mandelbrot:
         values = empty((self.grid_points, self.grid_points))
         for i in range(self.grid_points):
             for j in range(self.grid_points):
-                values[j, i] = self._mandel_calc(real[i] + 1j * imaginary[j])
                 values[j, i] = self._mandel_calc(real[i] + 1j * imaginary[j])
         self._plotting(values)
 
@@ -43,11 +44,16 @@ class Mandelbrot:
 
     def _plotting(self, values):
         """Create a heatmap of points."""
+        date_time = datetime.now().isoformat()[:16]
+        file_path = (
+            Path(__file__).parent.parent / f"images/mandelbrot-{self.grid_points}-{self.tolerance}-{date_time}.png"
+        )
+
         print("Plotting the set...")
         plt.xlabel("Real Axis")
         plt.ylabel("Imaginary Axis")
-        plt.title("The Mandelbrot Set. Tolerance: %s" % self.tolerance)
+        plt.title("The Mandlebrot Set. Tolerance: %s" % self.tolerance)
         plt.grid(True)
         plt.imshow(values, interpolation="none", extent=[self.x_min, self.x_max, self.y_min, self.y_max])
-        plt.savefig("Mandelbrot.png", bbox_inches="tight")
+        plt.savefig(file_path, bbox_inches="tight")
         plt.show()
